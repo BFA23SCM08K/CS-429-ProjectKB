@@ -5,7 +5,7 @@
 ## Abstract
 This project presents the development of an innovative information retrieval system tailored to facilitate efficient web document search and retrieval. The system comprises three primary components: a robust web crawler, an efficient indexer, and a responsive search server. Leveraging state-of-the-art technologies such as Scrapy, Scikit-Learn, and Flask.
 
-###Objective:
+### Objective:
 1.	Web Crawling Using Scrapy:
 •	Develop a web crawler utilizing Scrapy to retrieve web documents in HTML format.
 •	Configure the crawler to start from a specified seed URL/domain, with controls for maximum pages to crawl and the depth of navigation.
@@ -16,7 +16,8 @@ This project presents the development of an innovative information retrieval sys
 3.	Query Management with Flask:
 •	Construct a Flask application to process textual queries in JSON format.
 •	Ensure rigorous validation and error-checking of incoming queries and deliver the most relevant top-K results from the indexed documents.
-###Future Enhancements:
+
+### Future Enhancements:
 1.	Advancements in Web Crawling:
 •	Investigate and implement distributed crawling using scrapyd to facilitate expansive web crawling across multiple servers.
 2.	Improvements in Search Indexing:
@@ -26,22 +27,22 @@ This project presents the development of an innovative information retrieval sys
 •	Implement spell-check and suggestions for queries using NLTK to improve query accuracy.
 •	Expand query capabilities with WordNet for a broader and more relevant search.
 
-##Project Overview:
+## Project Overview:
 
-###System Design:
+### System Design:
 
 •	Web Scraping Component: Efficiently scrapes quotes and authors from various sources, saving them into designated files (quotes_page_1 to quotes_page_100) with a set depth limit of 2.
 •	Indexing Component: Utilizes TF-IDF scoring to create a structured and efficient inverted index.
 •	Query Handling Component: Manages and processes user queries, providing accurate and relevant search results via a Flask application.
 
-###Interaction Flow:
+### Interaction Flow:
 
 1.	Crawler to Indexer Workflow:
 •	The Scrapy crawler fetches documents, storing them as text files. These files are subsequently indexed by the Scikit-Learn indexer, which computes TF-IDF scores and constructs the inverted index.
 2.	Indexer to Query Processor Workflow:
 •	Queries received by the Flask application are processed using the pre-built inverted index to determine document relevance through Cosine similarity, delivering precise search results to the user.
 
-###Integration and Architecture:
+### Integration and Architecture:
 
 •	Web Scraping: Managed through crawler.py.
 
